@@ -1,4 +1,5 @@
 import { signIn } from 'next-auth/react';
+import Button from '@/components/Button';
 
 export default function Login() {
   return (
@@ -18,15 +19,14 @@ export default function Login() {
         <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
           <form className='space-y-6' action='#' method='POST'>
             <div>
-              <button
+              <Button
+                label='Entrar com Google'
+                size='md'
+                color='#403aed'
                 onClick={() =>
                   signIn('GoogleProvider', { callbackUrl: '/Home' })
                 }
-                type='submit'
-                className='flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
-              >
-                Entrar com Google
-              </button>
+              />
             </div>
           </form>
         </div>
