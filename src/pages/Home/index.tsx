@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <UserInfo />
-      <div className=' sm:mx-auto sm:w-full sm:max-w-sm'>
+      <div className=' sm:mx-auto sm:w-1/4 sm:max-w-sm'>
         <form className='space-y-6' action='#' method='POST'>
           <Button
             label='Sair'
